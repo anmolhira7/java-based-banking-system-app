@@ -1,0 +1,16 @@
+1.    Database Name
+  create table bankingsystem;
+  using table bankingsystem;
+
+2.   Table Customerinfo ---Customer Account with personal Details-
+ create table customerinfo(uid int primary key auto_increment,fname varchar(30),mname varchar(30),lname varchar(30),gender varchar(20),email varchar(50),password varchar(30),phone numeric,dob varchar(60),address varchar(100),date  varchar(80));
+ alter table customerinfo auto_increment=10000;
+
+3.   Table employeeinfo  ---Employee Account with personal Details-
+ create table employeeinfo(uid varchar(40) primary key not null,fname varchar(20),mname varchar(20),lname varchar(20),gender varchar(35),phone numeric(12),address varchar(100),date varchar(50),state varchar(50),dob varchar(50),password varchar(40),email varchar(50));
+
+4.   Table trans ---For all transactions and balance details-
+ create table trans(acno int primary key,fname varchar(20),mname varchar(20),lname varchar(20),balance int);
+
+5.   Table history ---For transaction history-
+ create table history(id int primary key auto_increment,acno int,w_d varchar(15),date varchar(70),amount int);
